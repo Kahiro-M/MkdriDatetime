@@ -10,8 +10,8 @@ import sys
 def mkdir_datetime(folder_start='',folder_end=''):
     dt_now = dt.datetime.now()
     timestamp_str = dt_now.strftime('%Y%m%d_%H%M_%S')
-    # 現在のフォルダパス(プログラムが実行されているフォルダパス)
-    currentDir = os.path.dirname(os.path.abspath(sys.argv[0]))
+    # 現在のフォルダパス
+    currentDir = os.getcwd()
     # 作成フォルダ名
     resultDirName = folder_start + timestamp_str + folder_end
     # フォルダのフルパス
